@@ -13,7 +13,7 @@ Projeto criado no evento da Rocketseat NLW-Setup
 ## :rocket: Rodando o projeto
 Para rodar o repositório é necessário clonar o mesmo, dar o seguinte comando para iniciar o projeto:
 ```
-git clone 
+git clone git@github.com:ur4sh1/MOBILE-Setup---NLW-Rocketseat.git
 ```
 Instalar o npm
 ```
@@ -28,4 +28,8 @@ npx expo start
 Criando o projeto web com o Expo - com o template typescript
 ```
 npx create-expo-app mobile --template
+```
+Instalando a fonte Inter do google
+```
+npx expo install expo-font @expo-google-fonts/inter
 ```
