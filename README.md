@@ -33,3 +33,69 @@ Instalando a fonte Inter do google
 ```
 npx expo install expo-font @expo-google-fonts/inter
 ```
+Instalando a biblioteca NativeWind
+```
+npm i nativewind
+```
+Instalando a biblioteca tailwindcss como dependência de desenvolvimento
+```
+npm i tailwindcss --save -D
+```
+Iniciando o arquivo de configuração do tailwind
+```
+npx tailwindcss init
+```
+Criar a pasta @types, criar um arquivo com o nome "app.d.ts"
+```
+/// <reference types="nativewind/types" />
+```
+Intalando a biblioteca Svg do Expo
+```
+npx expo install react-native-svg
+```
+Instalando a biblioteca react-native-svg-transformer como dependência de desenvolvimento
+```
+npm i react-native-svg-transformer --save-dev
+```
+Criar um arquivo de configuração na raiz com o nome "metro.config.js"
+```
+const { getDefaultConfig } = require("expo/metro-config");
+
+module.exports = (() => {
+  const config = getDefaultConfig(__dirname);
+
+  const { transformer, resolver } = config;
+
+  config.transformer = {
+    ...transformer,
+    babelTransformerPath: require.resolve("react-native-svg-transformer"),
+  };
+  config.resolver = {
+    ...resolver,
+    assetExts: resolver.assetExts.filter((ext) => ext !== "svg"),
+    sourceExts: [...resolver.sourceExts, "svg"],
+  };
+
+  return config;
+})();
+```
+Criar um arquivo na pasta @types com o nome "svg.d.ts"
+```
+declare module "*.svg" {
+  import React from 'react';
+  import { SvgProps } from "react-native-svg";
+  const content: React.FC<SvgProps>;
+  export default content;
+}
+```
+Instalando a biblioteca dayjs
+```
+npm i dayjs
+```
+Criar a pasta 'lib', criar o arquivo dayjs.ts, definindo o local pt-br
+```
+import dayjs from "dayjs";
+import 'dayjs/locale/pt-br';
+
+dayjs.locale('pt-br');
+```
