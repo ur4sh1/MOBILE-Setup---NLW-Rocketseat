@@ -99,3 +99,15 @@ import 'dayjs/locale/pt-br';
 
 dayjs.locale('pt-br');
 ```
+Instalando a bíblioteca react-navigation
+```
+npm install @react-navigation/native
+```
+Instalando as dependências da bíblioteca react-navigation
+```
+npx expo install react-native-screens react-native-safe-area-context
+```
+Instalando o native stack da bíblioteca react-navigation
+```
+npm install @react-navigation/native-stack
+```
