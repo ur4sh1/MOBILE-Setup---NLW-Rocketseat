@@ -21,7 +21,7 @@ npm i
 ```
 Executar
 ```
-npx expo start
+npx expo start --clear
 ```
 
 ## :wrench: Histórico de comandos
