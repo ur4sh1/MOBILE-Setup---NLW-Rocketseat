@@ -111,3 +111,7 @@ Instalando o native stack da bíblioteca react-navigation
 ```
 npm install @react-navigation/native-stack
 ```
+Instalando o axios para requisições http
+```
+npm i axios
+```
