@@ -115,3 +115,7 @@ Instalando o axios para requisições http
 ```
 npm i axios
 ```
+Instalando a bíbioteca clsx
+```
+npm i --save clsx
+```
