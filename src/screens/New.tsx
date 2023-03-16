@@ -27,9 +27,7 @@ export function New() {
     try {
       if(!title.trim() || weekDays.length === 0){
         if(!title.trim()){
-          Alert.alert('Título do hábito','Nome vazio!');
-        }else{
-          Alert.alert('Recorrência','Selecione pelo menos um dia!');
+           return Alert.alert('Título do hábito','Nome ou seleção de recorrência vazia!');
         }
       }
 

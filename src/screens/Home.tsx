@@ -27,16 +27,14 @@ export function Home() {
   const { navigate } = useNavigation();
 
   async function fetchData() {
-    console.log('fetchData');
-
+    
     try {
       setLoading(true);
       const response = await api.get('/summary');
-      console.log(response.data);
       setSummary(response.data);
     } catch (error) {
-      Alert.alert('Ops','Não foi possível carregar!');
       console.log(error);
+      Alert.alert('Ops','Não foi possível carregar!');
     } finally {
       setLoading(false);
     }
